@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h5 class="errormsg">Please login to access this area</h5>
+<h1>Login</h1>
+<br>
+<form method="post">
+<table>
+<tr>
+    <td></td>
+    <td class="errormsg">{{error}}</td>
+</tr>
+<tr>
+    <td><label class="topspace rightspace">Username:</label></td>
+    <td><input type="text" name="username" value="{{username}}" required></td>
+</tr>
+<tr>
+    <td><label class="topspace rightspace">Password:</label></td>
+    <td><input type="password" name="password" value="" required></td>
+</tr>
+<tr>
+    <td></td>
+    <td><input type="submit" class="btn btn-success topspace" value="Login"></td>
+</tr>
+</table>
+</form>
+{% endblock %}

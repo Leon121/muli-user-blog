@@ -1,0 +1,37 @@
+a {
+  color:#ffffff;
+}
+
+a:focus, 
+a:hover {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color:#000000;
+  color: #fff;
+  border: none;
+}
+
+.content {
+  color: #4c4c4c;
+  margin: 0;
+  padding: 16px 0;
+  position: relative;
+  transition: background 0.5s ease 0s;
+}
+
+.topspace{
+    margin-top: 5px;
+}
+
+.rightspace{
+    margin-right: 5px;
+}
+
+.errormsg{
+  color: #db2428;
+}
