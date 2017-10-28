@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Signup</h1>
+    <br>
+    <form method="post">
+      <table>
+        <tr>
+          <td class="errormsg">*</td>
+          <td><label class="topspace rightspace">Username:</label></td>
+          <td><input class="rightspace" type="text" name="username" value="{{username}}" required></td>
+          <td class="errormsg">{{error_username}}</td>
+        </tr>
+                <br>
+        <tr>
+          <td class="errormsg">*</td>
+          <td><label class="topspace rightspace">Password:</label></td>
+          <td><input  class="topspace rightspace" type="password" name="password" value="" required></td>
+          <td class="errormsg">{{error_password}}</td>
+        </tr>
+
+        <tr>
+          <td class="errormsg">*</td>
+          <td><label class="topspace rightspace">Confirm Password:</label></td>
+          <td><input  class="topspace rightspace" type="password" name="verify" value="" required></td>
+          <td class="errormsg">{{error_verify}}</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td><label class="topspace rightspace">Email:</label></td>
+          <td><input  class="topspace rightspace" ="text" name="email" id="email" value=""></td>
+          <td class="errormsg">{{error_email}}</td>
+        </tr>
+        <tr>
+           <td></td>
+           <td></td>
+           <td><input type="submit" class="btn btn-success topspace" value="Signup"></td>
+           <td></td>
+        </tr>
+      </table>
+
+      </form>
+{% endblock %}

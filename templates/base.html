@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/main.css" rel="stylesheet">
+        <title>Multi User Blog</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="navbar-header">
+                        <a href="/"><h3>Multi User Blog</h3></a>
+                    </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            {% if not user %}
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/signup">Signup</a></li>
+                            {% elif user %}
+                                <li><a href="/">Blog</a></li>
+                                <li><a href="/newpost">New Post</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                                <li><small>Hello, {{username}}</small></li>
+                            {% endif %}
+                        </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <hr>
+        <div align=center><small>Created on 3/14/2017 by Leonardo Baroncini for Udacity's Nanodegree course "Full Stack Web Development"</small>
+  </div>
+</body>
+</html>
